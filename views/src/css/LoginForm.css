@@ -1,0 +1,40 @@
+.login-form {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #2e979f; /* Black background color */
+      color: #ffffff; /* Text color */
+    }
+    
+    .login-form input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    
+    .login-form button {
+      width: 100%;
+      padding: 8px;
+      background-color: transparent; /* Transparent background */
+      color: #ffffff; /* Text color */
+      border: 1px solid #573737; /* Black border */
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px; /* Gap between login button and forgot password button */
+    }
+    
+    .login-form button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .login-form button:not(:last-child) {
+      margin-right: 5px;
+    }
+    
+    .login-form button:hover {
+      background-color: #82aedd;
+    }
+    
