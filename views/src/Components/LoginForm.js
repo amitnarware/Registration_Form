@@ -33,10 +33,13 @@ const LoginForm = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-
+  
       if (response.ok) {
         alert('Login successful');
         history.push('/user-list'); // Redirect to userlist page
+  
+        // Store token in local storage
+        localStorage.setItem('token', data.token);
       } else {
         alert(data.error || 'Login failed');
       }
@@ -44,9 +47,11 @@ const LoginForm = () => {
       console.error('Error logging in:', error);
       alert('Error logging in. Please try again later.');
     }
-
+  
     setLoading(false);
   };
+
+   
 
   const handleForgotPassword = async () => {
     const email = prompt('Enter your email to reset password:');

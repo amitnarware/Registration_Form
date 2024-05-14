@@ -29,8 +29,6 @@ app.use('/uploads', express.static('uploads'));
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 
-
-
 // Database connection
 sequelize.sync()
   .then(() => {
